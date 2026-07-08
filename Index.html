@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georgia Company Search | Workspace Detector</title>
+    <meta name="description" content="Search for companies in Georgia and detect if they are using Google Workspace.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="header">
+            <div class="logo-container">
+                <i class="fa-solid fa-briefcase logo-icon"></i>
+                <h1 class="logo-text">GEO<span class="highlight">FIND</span></h1>
+            </div>
+            <p class="subtitle">Search companies in Georgia & discover Workspace opportunities</p>
+        </header>
+
+        <main class="main-content">
+            <section class="search-section glass-panel">
+                <div class="search-wrapper">
+                    <i class="fa-solid fa-search search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Search by company name, industry, or domain..." autocomplete="off">
+                    <button id="searchBtn" class="primary-btn">Search</button>
+                </div>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="gw-user">Uses Workspace</button>
+                    <button class="filter-btn" data-filter="gw-opportunity">Workspace Opportunity</button>
+                </div>
+            </section>
+
+            <section class="results-section" id="resultsSection">
+                <div class="results-header">
+                    <h2 id="resultsCount">0 Companies Found</h2>
+                    <div class="loader-container hidden" id="globalLoader">
+                        <div class="spinner"></div>
+                        <span>Scanning Domains...</span>
+                    </div>
+                </div>
+                <div class="company-grid" id="companyGrid">
+                    <!-- Company cards will be dynamically injected here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals or tooltips can go here -->
+
+    <script src="mockData.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
